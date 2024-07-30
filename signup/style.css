@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none; /* to remove black border of input box  */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(74, 75, 63);
+    min-height: 100vh;
+    margin: 0;
+}
+.container{
+    background-color:rgb(240, 243, 176);
+    width: 450px;
+    overflow: hidden;
+    border:2px solid black
+
+}
+.header{
+    background-color: aliceblue;
+    padding: 20px 105px;
+    border-bottom: 1px solid rgb(23, 18, 18);
+}
+.form{
+    padding: 30px 40px;
+}
+.field{
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    position: relative;
+}
+.field label{  /* for inner labels of form */
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.field input:not(.terms){
+    display: block;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    width: 100%;
+    padding:10px;
+}
+.field span{
+    position: absolute;  /*checks for parent position and starts from it*/
+    top: 30px;
+    right: 10px;
+    visibility: hidden;
+}
+.field small{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    visibility: hidden;
+}
+.form .button{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+    border: 2px solid blue;
+
+}
+
+
+/*  javascript entered    */
+
+.field.success input{
+    border-color: green;
+}
+.field.error input{
+    border-color: red;
+}
+
+.field.success .span.success{ /* span tag lo success tag already undali */
+    color: green;
+    visibility: visible;
+}
+.field.error .span.error{
+    color: red;
+    visibility: visible;
+}
+.field.error .span.success{
+    visibility: none;
+}
+.field.success .span.error{
+    visibility: none;
+}
+
+
+.field.error small{
+    font-style: italic;
+    bottom:0px;
+    visibility: visible;
+    text-transform: uppercase;
+    color: rgb(245, 57, 57);
+}
+
+
